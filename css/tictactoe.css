@@ -1,0 +1,90 @@
+body {
+    background-color:#333333;
+}
+
+.icon-menu{
+margin-bottom:-165px;
+}
+
+.icon-menu pre {
+display: inline-block;
+margin-bottom: none;
+margin-right: 20px;
+font-size: 1em;
+cursor: pointer;
+}
+
+.menu {
+  background-color:transparent;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+.menu ul {
+  border-top: 1px solid #3DFF0E;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #3DFF0E;
+  font-family: 'Share Tech Mono',sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #3DFF0E;
+  font-size: 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close{
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 2em;
+    color: #3DFF0E;
+    position:relative;
+    left: 225px;
+    cursor: pointer;
+}
+
+
+pre {
+    margin-bottom: 30px;
+    color: #3DFF0E;
+    font-size:.5em;
+    background-color:#333333;
+    border: none;
+    text-align:center;
+    text-decoration: none;
+}
+
+table, td {
+    width: 265px;
+    height: 100px;
+    margin-right:auto;
+    margin-left: auto;
+    border: 1px solid;
+    color: #3DFF0E;
+    text-align: center;
+    cursor: crosshair;
+    font-family: 'Share Tech Mono',sans-serif;
+    font-size: 1.3em;
+}
+
+.credit {
+    font-family: 'Share Tech Mono',sans-serif;
+    color: #3DFF0E;
+    text-align:center;
+    font-size: .85em;
+}
+
+.cell p {
+    text-align:center;
+}
