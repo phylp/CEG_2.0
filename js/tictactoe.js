@@ -44,9 +44,10 @@ var main = function(){
     
     
     /* ------------------- ANNOUNCE WINNER ----------------*/
+    //need to rewrite so that check function checks valid immediately and not after board is completed
     
     function ticTacTest(){
-            if (isDone()===true) {
+            if (isDone()===true){
             var board = [];
             $('#board tr').each(function(){ 
                 board.push($('td').text());
@@ -96,7 +97,7 @@ var main = function(){
         function findWinner(group){
             var first = group[0];
             for (var i = 1; i<group.length; i++){
-                if(group[i]!==first){
+                if((group[i]!==first) || (group.length < 3)){ 
                     return null;
                 }
             }
@@ -107,7 +108,7 @@ var main = function(){
     
     /* --------------- MENU -------------------- */
     
-  /* Push the body and the nav over by 285px over */
+  /* Push nav over by 285px */
   $('.icon-menu').click(function() {
     $('.menu').animate({
       left: "0px"
