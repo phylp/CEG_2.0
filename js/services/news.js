@@ -7,3 +7,5 @@ app.factory('news', ['$http', function($http) {
               return err; 
             }); 
 }]);
+
+
