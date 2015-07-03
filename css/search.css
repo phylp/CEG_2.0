@@ -1,0 +1,175 @@
+body {
+    background-color: #333;
+}
+
+.icon-menu{
+    margin-bottom:-165px;
+}
+
+.welcomebox {
+    border:2px;   
+}
+
+.icon-menu pre {
+display: inline-block;
+margin-bottom: none;
+margin-right: 20px;
+font-size: 1em;
+cursor: pointer;
+}
+
+.menu {
+  background-color:transparent;
+  left: -285px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 285px;
+}
+
+.menu ul {
+  border-top: 1px solid #3DFF0E;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #3DFF0E;
+  font-family: 'Share Tech Mono',sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+.menu a {
+  color: #3DFF0E;
+  font-size: 23px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-close{
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 2em;
+    color: #3DFF0E;
+    position:relative;
+    left: 225px;
+    cursor: pointer;
+}
+
+.gicon {
+    position:relative;
+    left: 2em;
+}
+
+
+pre {
+    margin-bottom: 30px;
+    color: #3DFF0E;
+    font-size:.5em;
+    background-color:#333333;
+    border: none;
+    text-align:center;
+    text-decoration: none;
+}
+
+.welcometxt {
+    font-size: 1.2em;
+    color: #3DFF0E;
+    padding-top:5em;
+    width:100%;
+}
+
+.credit {
+    font-family: 'Share Tech Mono',sans-serif;
+    color: #3DFF0E;
+    text-align:center;
+    font-size: .85em;
+}
+
+.cell p {
+    text-align:center;
+}
+
+.myButton {
+    margin: auto;
+	-moz-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+	background-color:transparent;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #3eff0e;
+	display:inline-block;
+	cursor:pointer;
+	color:#3EFF0E;
+	font-family:'Share Tech Mono',sans-serif;
+	font-size:25px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3eff0e;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* News Content */
+
+.centerBlock{
+    display: block;
+    width:54%;
+    margin-left:auto;
+    margin-right: auto;
+    padding-top:1em;   
+    padding-bottom:1em;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+
+li {
+    list-style: none;
+}
+
+input, .btn{
+    border-radius: 2px;
+    border: 1px solid #3EFF0E;
+    background-color: transparent;
+    font-family: 'Share Tech Mono',sans-serif;
+	color:#3EFF0E;
+    font-size: 1.5em;
+    margin-top:5%;
+}
+
+
+@media only screen and (min-width:0px) and (max-width:767px) {
+    .welcometxt{
+        font-size: .5em;
+    }  
+    
+    .icon-menu {
+        display: inline-block;
+    }
+    
+    .gicon {
+        font-size: .01em;
+        position: static;
+        }
+    
+    .menu{
+    background-color: #333;
+    }
+    
+
+}
+
+
