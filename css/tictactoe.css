@@ -163,4 +163,17 @@ input, .btn{
 }
 
 
-
+select {
+   background: transparent;
+   width: 220px;
+   padding: 5px;
+   font-family: 'Share Tech Mono',sans-serif;
+   color:#3EFF0E;
+   font-size: 1.5em;
+   margin-top:5%;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }

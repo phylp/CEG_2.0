@@ -1,18 +1,35 @@
 var main = function(){
-    //establish user symbols
-    var computerSymbol;
-    var userSymbol = prompt("choose X or O");
-    userSymbol = userSymbol.toUpperCase();
+
+    $('#board').hide();
+    $('#select').hide();
     
-    if (userSymbol==="X"){
-        computerSymbol = "O";
-    } else {
-        computerSymbol = "X";
-    }
-    
-    //event handler and computer response
+    $('.play').click(function() {
+        $('#play').hide();
+        $('#select').fadeIn(400);      
+    });
+
+     $('.play').click(function() {
+        $('#play').hide();
+        $('#select').fadeIn(400);      
+    });
+
+    var selected;
+    var computerSymbol
+    $('#symbolBtn').click(function(e){
+        e.preventDefault();
+        selected = $('#selectSymbol').val();
+        if (selected==="X"){
+            computerSymbol = "O";
+        } else {
+            computerSymbol = "X";
+        }
+        $('#select').hide();
+        $('#board').fadeIn(400);
+    })  
+
+    //event handusler and computer response
     $('td').click(function() {
-       $(this).text(userSymbol); 
+       $(this).text(selected); 
         computerTry();
         ticTacTest();
     });
