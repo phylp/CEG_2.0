@@ -1,3 +1,14 @@
+body, .Site {
+  background-color: #333;
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;
+}
+
+.Site-content{
+  flex: 1;
+}
+
 .flexBody {
     background-color:#333333;
     display: flex;
@@ -70,7 +81,6 @@ cursor: pointer;
     left: 2em;
 }
 
-
 pre {
     margin-bottom: 30px;
     color: #3DFF0E;
@@ -87,7 +97,7 @@ pre {
     padding-top:5em;
 }
 
-table, td {
+#board, .cell1, .cell2,.cell3,.cell4,.cell5,.cell6,.cell7,.cell8,.cell9 {
     width: 265px;
     height: 100px;
     margin-right:auto;
@@ -153,7 +163,6 @@ table, td {
     font-size: 2em;
 	color:#3EFF0E;
 }
-
 
 .newsTitles{
     font-family: 'Share Tech Mono',sans-serif;
@@ -297,6 +306,36 @@ i {
   margin: 0 20px;
 }
 
+select {
+   background: transparent;
+   width: 220px;
+   padding: 5px;
+   font-family: 'Share Tech Mono',sans-serif;
+   color:#3EFF0E;
+   font-size: 1.5em;
+   margin-top:5%;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   margin-top: 7em;
+}
 
+.play{
+  margin-top: 4em;
+}
 
+.intro{
+  color:#3EFF0E;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 1em;
+  margin-bottom: -3em;
+  margin-top: 8em;
+}
 
+.mutinygames{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+  color:#3EFF0E;
+}
