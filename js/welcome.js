@@ -1,7 +1,5 @@
 var main = function(){
     
-            
-    
     /* --------------- MENU -------------------- */
     
   /* Push the body and the nav over by 285px over */
