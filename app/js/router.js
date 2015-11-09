@@ -6,14 +6,16 @@ module.exports = function(app){
         controller: 'welcome'
       })
       .when('/games', {
-        templateUrl: 'templates/games.html'
+        templateUrl: 'templates/games.html',
+        controller: 'games'
       })
       .when('/news', {
         templateUrl:'templates/news.html',
         controller: 'newsController'
       })
       .when('/search', {
-        templateUrl: 'search.html'
+        templateUrl: 'templates/search.html',
+        controller: 'newsController'
       })
       .otherwise({
         redirectTo: '/home'

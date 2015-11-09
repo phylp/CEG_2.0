@@ -52,7 +52,7 @@
 
 	__webpack_require__(4)(cegApp);
 	__webpack_require__(7)(cegApp);
-	__webpack_require__(10)(cegApp);
+	__webpack_require__(11)(cegApp);
 
 
 
@@ -30017,8 +30017,8 @@
 
 	module.exports = function(app){
 	  __webpack_require__(8)(app);
-	  //require('.sports_controller')(app);
-	  __webpack_require__(9)(app) 
+	  __webpack_require__(9)(app);
+	  __webpack_require__(10)(app); 
 	}
 
 /***/ },
@@ -30028,99 +30028,88 @@
 	module.exports = function(app){
 	  app.controller('newsController', ['$scope', 'news', 'sports', function($scope, news, sports) {
 	  
-	  $scope.main = function(){      
-	       
-	  $('.icon-menu').click(function() {
-	    $('.menu').animate({
-	      left: "0px"
-	    }, 200);
-	    $('.icon-menu').hide(); 
-	   });
+	    $scope.main = function(){      
+	         
+	      $('.icon-menu').click(function() {
+	        $('.menu').animate({
+	          left: "0px"
+	        }, 200);
+	        $('.icon-menu').hide(); 
+	       });
 
-	  /* Then push them back */
-	  $('.icon-close').click(function() {
-	    $('.menu').animate({
-	      left: "-285px"
-	    }, 200);
+	      $('.icon-close').click(function() {
+	        $('.menu').animate({
+	          left: "-285px"
+	        }, 200);
 
-	    $('body').animate({
-	      left: "0px"
-	    }, 200);
-	    $('.icon-menu').show();
-	  });
-	      
-	  
-	    // $('.welcometxt').hide();
-	    // $('.myButton').hide();
-	    // $(window).load(function(){
-	    //     $('.welcometxt').fadeIn(3000);
-	    //     $('.myButton').fadeIn(3000);
-	    // });
-
-	   /*--------------- HIDE AND SHOW CONTENT ------------*/
-
-	    $('#sportsBlock').hide();
-	    $('#weatherBlock').hide();
-	    
-	    $('.sportsButton').click(function() {
-	        $('#newsBlock').hide();
-	        $('#sportsBlock').fadeIn(400);
-	        $('#weatherBlock').hide();    
-	        
-	    });
-	    
-	    $('.newsButton').click(function() {
-	        $('#sportsBlock').hide();
-	        $('#newsBlock').fadeIn(400);
-	        $('#weatherBlock').hide();    
-	    });
-
-	    $('.weatherButton').click(function() {
-	        $('#sportsBlock').hide();
-	        $('#newsBlock').hide();
-	        $('#weatherBlock').fadeIn(700);
-	    });
-	    
-	   /*--------------- WEATHER ------------*/
-	    
-	    $(".btn").click(function() {
-	        loadWeather(location); //@params location, woeid
-	    });
-	    
-
-	    function loadWeather(location, woeid) {
-	      $.simpleWeather({
-	        location: $("input").val(),
-	        woeid: woeid,
-	        unit: 'f',
-	        success: function(weather) {
-	          html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-	          html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-	          html += '<li class="currently">'+weather.currently+'</li>';
-	          $("#weather").html(html);
-	          },
-	        error: function(error) {
-	        $("#weather").html('<p>'+error+'</p>');
-	        }
+	        $('body').animate({
+	          left: "0px"
+	        }, 200);
+	        $('.icon-menu').show();
 	      });
-	    }
-	}
-	  /////////////////
-	  news.success(function(data) {
-	    $scope.headlines = data.response;
-	    console.log(data);
-	  }).error(function(err) {
-	      $scope.error = err;
-	      console.log(err);
-	  });
+	          
+	        $('#sportsBlock').hide();
+	        $('#weatherBlock').hide();
+	        
+	        $('.sportsButton').click(function() {
+	            $('#newsBlock').hide();
+	            $('#sportsBlock').fadeIn(400);
+	            $('#weatherBlock').hide();    
+	            
+	        });
+	        
+	        $('.newsButton').click(function() {
+	            $('#sportsBlock').hide();
+	            $('#newsBlock').fadeIn(400);
+	            $('#weatherBlock').hide();    
+	        });
 
-	  sports.success(function(data) {
-	    $scope.sportHeadlines = data.response;
-	    console.log(data);
-	  }).error(function(err) {
-	      $scope.error = err;
-	      console.log(err);
-	  });
+	        $('.weatherButton').click(function() {
+	            $('#sportsBlock').hide();
+	            $('#newsBlock').hide();
+	            $('#weatherBlock').fadeIn(700);
+	        });
+	        
+	       /*--------------- WEATHER ------------*/
+	        
+	        $(".btn").click(function() {
+	            loadWeather(location); //@params location, woeid
+	        });
+	        
+
+	        function loadWeather(location, woeid) {
+	          $.simpleWeather({
+	            location: $("input").val(),
+	            woeid: woeid,
+	            unit: 'f',
+	            success: function(weather) {
+	              html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+	              html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+	              html += '<li class="currently">'+weather.currently+'</li>';
+	              $("#weather").html(html);
+	              },
+	            error: function(error) {
+	            $("#weather").html('<p>'+error+'</p>');
+	            }
+	          });
+	        }
+	      }
+	    
+	      news.success(function(data) {
+	        $scope.headlines = data.response;
+	        console.log(data);
+	      }).error(function(err) {
+	          $scope.error = err;
+	          console.log(err);
+	      });
+
+	      sports.success(function(data) {
+	        $scope.sportHeadlines = data.response;
+	        console.log(data);
+	      }).error(function(err) {
+	          $scope.error = err;
+	          console.log(err);
+	      });
 
 	  }]);
 	}
@@ -30166,6 +30155,177 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app){
+	  app.controller('games', ['$scope', function($scope){
+	    
+	    $scope.main = function(){
+	      $('#retry').hide()
+	      $('#board').hide();
+	      $('#select').hide();
+	      
+	      $('.play').click(function() {
+	        $('#play').hide();
+	        $('#select').fadeIn(400);      
+	      });
+
+	       $('.play').click(function() {
+	          $('#play').hide();
+	          $('#select').fadeIn(400);      
+	      });
+
+	      $('#retry').click(function(){
+	        $('#retry').hide();
+	        $('#board').hide();
+	        $('#select').hide();
+	        $('#play').show();
+	        clearAllCells();
+	      })
+
+	      function clearAllCells(){
+	        for(var k = 1; k < 10; k++){
+	          $('.cell' + k).text('');
+	        }
+	      }
+
+	      var selected;
+	      var computerSymbol;
+	      $('#symbolBtn').click(function(e){
+	        e.preventDefault();
+	        selected = $('#selectSymbol').val();
+	        if(selected === "X" || selected === "O"){
+	          if (selected==="X"){
+	              computerSymbol = "O";
+	          } else {
+	              computerSymbol = "X";
+	          }
+	          $('#select').hide();
+	          $('#board').fadeIn(400);
+	        } else {
+	            alert('pick symbol');
+	        }
+	      })  
+
+	      //event handler and computer response
+	      $('td').click(function() {
+	       $(this).text(selected); 
+	        computerTry();
+	        ticTacTest();
+	      });
+	      
+	      function isDone(){
+	        var count = 0;
+	        $('td').each(function(){
+	          if ($(this).text() === "X" || $(this).text()==="O"){
+	          count+=1;
+	          }
+	        });
+	        if(count===9){
+	          return true;
+	        }         
+	      }
+	        
+	      function computerTry(){
+	        if(isDone()===true){
+	          return;
+	        }
+	        var compPick = Math.ceil(Math.random()*9);
+	        if($('.cell' + compPick).text()===''){
+	          $('.cell' + compPick).text(computerSymbol);
+	        } else {
+	          computerTry();
+	        }
+	      }  
+	        
+	        /* ------------------- ANNOUNCE WINNER ----------------*/
+	        //need to rewrite so that check function checks valid immediately and not after board is completed
+	        
+	        function ticTacTest(){
+	          if (isDone()===true){
+	            var board = [];
+	            $('#board tr').each(function(){ 
+	              board.push($('td').text());
+	            });
+	            board=board.splice(2).join().split(''); //ghetto rigging, I know
+	            var row1 = board.slice(0,3);
+	            var row2 = board.slice(3,6);
+	            var row3 = board.slice(6,9);
+	            var arrangedBoard = [];
+	            arrangedBoard.push(row1, row2, row3);
+	            /* END OF SETUP, BEGINNING OF CHECK */
+	            
+	            var groups =[];
+	            for(var r = 0; r<arrangedBoard.length; r++) {
+	              groups.push(arrangedBoard[r]);
+	            }
+	            
+	            for (var c = 0; c<arrangedBoard.length; c++) {
+	              var col = [];
+	              for (r = 0; r<arrangedBoard.length; r++) {
+	                  col.push(arrangedBoard[r][c]);
+	              }
+	              groups.push(col);
+	            }
+	            
+	            var diagA=[];
+	            var diagB=[];
+	            for (r = 0; r<arrangedBoard.length; r++) {
+	              diagA.push(arrangedBoard[r][r]);
+	              diagB.push(arrangedBoard[r][arrangedBoard.length-r-1]);
+	            }
+	            groups.push(diagA);
+	            groups.push(diagB);
+	                
+	            for(var g = 0; g<groups.length; g++) {
+	              var winner = findWinner(groups[g]);
+	              if(winner !== null){ 
+	                alert("winner is " + winner);
+	                $('#retry').show();
+	                break;
+	              } 
+	            }
+	          }
+	        }
+
+	        function findWinner(group){
+	          var first = group[0];
+	          for (var i = 1; i<group.length; i++){
+	            if((group[i]!==first) || (group.length < 3)){ 
+	              return null;
+	            }
+	          }
+	          return first;
+	        }        
+	        
+	      /* --------------- MENU -------------------- */
+	        
+	      /* Push nav over by 285px */
+	      $('.icon-menu').click(function() {
+	        $('.menu').animate({
+	          left: "0px"
+	        }, 200);
+	        $('.icon-menu').hide(); 
+	       });
+
+	      /* Then push them back */
+	      $('.icon-close').click(function() {
+	        $('.menu').animate({
+	          left: "-285px"
+	        }, 200);
+
+	        $('body').animate({
+	          left: "0px"
+	        }, 200);
+	        $('.icon-menu').show();
+	      });
+	    }
+
+	  }])
+	}
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	module.exports = function(app){
 	  app.config(['$routeProvider', function($route){
 	    $route
 	      .when('/home', {
@@ -30173,14 +30333,16 @@
 	        controller: 'welcome'
 	      })
 	      .when('/games', {
-	        templateUrl: 'templates/games.html'
+	        templateUrl: 'templates/games.html',
+	        controller: 'games'
 	      })
 	      .when('/news', {
 	        templateUrl:'templates/news.html',
 	        controller: 'newsController'
 	      })
 	      .when('/search', {
-	        templateUrl: 'search.html'
+	        templateUrl: 'templates/search.html',
+	        controller: 'newsController'
 	      })
 	      .otherwise({
 	        redirectTo: '/home'
