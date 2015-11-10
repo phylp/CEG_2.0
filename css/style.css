@@ -1,3 +1,14 @@
+body, .Site {
+  background-color: #333;
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;
+}
+
+.Site-content{
+  flex: 1;
+}
+
 .flexBody {
     background-color:#333333;
     display: flex;
@@ -27,10 +38,10 @@ cursor: pointer;
 
 .menu {
   background-color:transparent;
-  left: -285px;  /* start off behind the scenes */
+  left: -210px;  /* start off behind the scenes */
   height: 100%;
   position: fixed;
-  width: 285px;
+  width: 210px;
 }
 
 .menu ul {
@@ -61,7 +72,7 @@ cursor: pointer;
     font-size: 2em;
     color: #3DFF0E;
     position:relative;
-    left: 225px;
+    left: 160px;
     cursor: pointer;
 }
 
@@ -69,7 +80,6 @@ cursor: pointer;
     position:relative;
     left: 2em;
 }
-
 
 pre {
     margin-bottom: 30px;
@@ -87,7 +97,7 @@ pre {
     padding-top:5em;
 }
 
-table, td {
+#board, .cell1, .cell2,.cell3,.cell4,.cell5,.cell6,.cell7,.cell8,.cell9 {
     width: 265px;
     height: 100px;
     margin-right:auto;
@@ -154,7 +164,6 @@ table, td {
 	color:#3EFF0E;
 }
 
-
 .newsTitles{
     font-family: 'Share Tech Mono',sans-serif;
     font-size: 1em;
@@ -175,7 +184,7 @@ a{
     width:54%;
     margin-left:auto;
     margin-right: auto;
-    padding-top:1em;   
+    padding-top:6em;   
     padding-bottom:1em;
     font-family: 'Share Tech Mono',sans-serif;
 	color:#3EFF0E;
@@ -191,7 +200,7 @@ input, .btn{
     border: 1px solid #3EFF0E;
     background-color: transparent;
     font-family: 'Share Tech Mono',sans-serif;
-	color:#3EFF0E;
+	  color:#3EFF0E;
     font-size: 1.5em;
     margin-top:5%;
 }
@@ -297,6 +306,92 @@ i {
   margin: 0 20px;
 }
 
+select {
+   background: transparent;
+   width: 220px;
+   padding: 5px;
+   font-family: 'Share Tech Mono',sans-serif;
+   color:#3EFF0E;
+   font-size: 1.5em;
+   margin-top:5%;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   margin-top: 7em;
+}
+
+.play{
+  margin-top: 1em;
+}
+
+.intro{
+  color:#3EFF0E;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 1em;
+  margin-bottom: -3em;
+}
+
+.mutinygames{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+  color:#3EFF0E;
+}
 
 
+  #messages li{
+    color:#3EFF0E;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 1em;
+  }
 
+  .chat-aligner, .form-aligner{
+    display: flex;
+    justify-content: center;
+  }
+
+  #chatbox{
+    display: flex;
+    min-height: 60vh;
+    flex-direction: row;
+    width: 55%;
+    border: 2px;
+    border-color: #3EFF0E;
+    border-style: solid;
+  }
+
+  #m{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.myChatButton {
+   margin-left: 4px;
+  -moz-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  background-color:transparent;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #3eff0e;
+  display:inline-block;
+  cursor:pointer;
+  color:#3EFF0E;
+  font-family:'Share Tech Mono',sans-serif;
+  font-size:16px;
+  padding:8px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3eff0e;
+  padding-bottom: 4px;
+  margin-bottom: 9px;
+}
+
+.mutiny-chat{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+  color:#3EFF0E;
+  text-align: center;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ceg",
+  "version": "2.0.0",
+  "description": "cardiff electric giant",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mime": "~1.2.7"
+  },
+  "devDependencies": {
+    "angular": "^1.4.7",
+    "angular-route": "^1.4.7",
+    "gulp": "^3.9.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify-css": "^1.2.1",
+    "socket.io": "^1.3.7",
+    "webpack-stream": "^2.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phylp/CEG_2.0.git"
+  },
+  "author": "Phillip Son",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phylp/CEG_2.0/issues"
+  },
+  "homepage": "https://github.com/phylp/CEG_2.0#readme"
+}

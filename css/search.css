@@ -1,5 +1,12 @@
-body {
+body, .Site {
     background-color: #333;
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+}
+
+.Site-content{
+  flex: 1;
 }
 
 .icon-menu{

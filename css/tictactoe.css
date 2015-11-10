@@ -1,9 +1,16 @@
-body {
-    background-color: #333;
+body, .Site {
+  background-color: #333;
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;
+}
+
+.Site-content{
+  flex: 1;
 }
 
 .icon-menu{
-    margin-bottom:-165px;
+  margin-bottom:-165px;
 }
 
 .welcomebox {
@@ -11,11 +18,11 @@ body {
 }
 
 .icon-menu pre {
-display: inline-block;
-margin-bottom: none;
-margin-right: 20px;
-font-size: 1em;
-cursor: pointer;
+  display: inline-block;
+  margin-bottom: none;
+  margin-right: 20px;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 .menu {
@@ -50,84 +57,84 @@ cursor: pointer;
 }
 
 .icon-close{
-    font-family: 'Share Tech Mono', sans-serif;
-    font-size: 2em;
-    color: #3DFF0E;
-    position:relative;
-    left: 225px;
-    cursor: pointer;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 2em;
+  color: #3DFF0E;
+  position:relative;
+  left: 225px;
+  cursor: pointer;
 }
 
 .gicon {
-    position:relative;
-    left: 2em;
+  position:relative;
+  left: 2em;
 }
 
 
 pre {
-    margin-bottom: 30px;
-    color: #3DFF0E;
-    font-size:.5em;
-    background-color:#333333;
-    border: none;
-    text-align:center;
-    text-decoration: none;
+  margin-bottom: 30px;
+  color: #3DFF0E;
+  font-size:.5em;
+  background-color:#333333;
+  border: none;
+  text-align:center;
+  text-decoration: none;
 }
 
 .welcometxt {
-    font-size: 1.2em;
-    color: #3DFF0E;
-    padding-top:5em;
+  font-size: 1.2em;
+  color: #3DFF0E;
+  padding-top:5em;
 }
 
 table, td {
-    width: 265px;
-    height: 100px;
-    margin-right:auto;
-    margin-left: auto;
-    border: 1px solid;
-    color: #3DFF0E;
-    text-align: center;
-    cursor: crosshair;
-    font-family: 'Share Tech Mono',sans-serif;
-    font-size: 1.3em;
+  width: 265px;
+  height: 100px;
+  margin-right:auto;
+  margin-left: auto;
+  border: 1px solid;
+  color: #3DFF0E;
+  text-align: center;
+  cursor: crosshair;
+  font-family: 'Share Tech Mono',sans-serif;
+  font-size: 1.3em;
 }
 
 .credit {
-    font-family: 'Share Tech Mono',sans-serif;
-    color: #3DFF0E;
-    text-align:center;
-    font-size: .85em;
+  font-family: 'Share Tech Mono',sans-serif;
+  color: #3DFF0E;
+  text-align:center;
+  font-size: .85em;
 }
 
 .cell p {
-    text-align:center;
+  text-align:center;
 }
 
 .myButton {
-    margin: auto;
-	-moz-box-shadow:inset 0px 1px 0px 0px #3eff0e;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #3eff0e;
-	background-color:transparent;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #3eff0e;
-	display:inline-block;
-	cursor:pointer;
-	color:#3EFF0E;
-	font-family:'Share Tech Mono',sans-serif;
-	font-size:25px;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #3eff0e;
+  margin: auto;
+  -moz-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  background-color:transparent;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #3eff0e;
+  display:inline-block;
+  cursor:pointer;
+  color:#3EFF0E;
+  font-family:'Share Tech Mono',sans-serif;
+  font-size:25px;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3eff0e;
 }
 .myButton:hover {
-	background-color:transparent;
+  background-color:transparent;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
+  position:relative;
+  top:1px;
 }
 
 /* News Content */
@@ -146,21 +153,31 @@ a{
     text-decoration: none;
 }
 
-
-
 li {
     list-style: none;
 }
 
 input, .btn{
-    border-radius: 2px;
-    border: 1px solid #3EFF0E;
-    background-color: transparent;
-    font-family: 'Share Tech Mono',sans-serif;
-	color:#3EFF0E;
-    font-size: 1.5em;
-    margin-top:5%;
+  border-radius: 2px;
+  border: 1px solid #3EFF0E;
+  background-color: transparent;
+  font-family: 'Share Tech Mono',sans-serif;
+  color:#3EFF0E;
+  font-size: 1.5em;
+  margin-top:5%;
 }
 
-
-
+select {
+   background: transparent;
+   width: 220px;
+   padding: 5px;
+   font-family: 'Share Tech Mono',sans-serif;
+   color:#3EFF0E;
+   font-size: 1.5em;
+   margin-top:5%;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+}

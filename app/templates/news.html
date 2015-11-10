@@ -1,0 +1,42 @@
+<section ng-init = "main()">
+  <pre>
+    _____ ___    ___   ___   ____ ____ ____        ____ __    ____ _____ ______ ___   ____ _____
+   / ___// _ |  / _ \ / _ \ /  _// __// __/       / __// /   / __// ___//_  __// _ \ /  _// ___/
+  / /__ / __ | / , _// // /_/ / / _/ / _/        / _/ / /__ / _/ / /__   / /  / , _/_/ / / /__  
+  \___//_/ |_|/_/|_|/____//___//_/  /_/         /___//____//___/ \___/  /_/  /_/|_|/___/ \___/  
+
+  </pre>
+  <center>        
+    <div class ="myButton newsButton">News</div>
+    <div class ="myButton sportsButton">Sports</div>
+    <div class ="myButton weatherButton">Weather</div>
+  </center>  
+  <main class = "flexMain">
+    <div id="newsBlock">
+      <div class="centerBlock">
+          <div class="main">
+            <h1 class="newsHeader">Headlines</h1>
+            <div class="news" ng-repeat="title in headlines.results">
+            <a href = "{{ title.webUrl }}"><p class=newsTitles>{{ title.webTitle }}</p></a>     
+            </div>
+          </div> 
+      </div>            
+    </div>
+    <div id = "sportsBlock">
+      <div class="centerBlock">
+        <div class="main">
+          <h1 class="newsHeader">Sports</h1>
+          <div class="news" ng-repeat="title in sportHeadlines.results">
+          <a href = "{{ title.webUrl }}"><p class=newsTitles>{{ title.webTitle }}</p></a>     
+          </div>
+        </div> 
+      </div>            
+    </div>                
+    <div id="weatherBlock">
+      <div id="weather"></div>
+      <input type = "text" placeholder="input location">
+      <button class = "btn">go</button>              
+    </div> 
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+</section>
