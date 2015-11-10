@@ -38,10 +38,10 @@ cursor: pointer;
 
 .menu {
   background-color:transparent;
-  left: -285px;  /* start off behind the scenes */
+  left: -210px;  /* start off behind the scenes */
   height: 100%;
   position: fixed;
-  width: 285px;
+  width: 210px;
 }
 
 .menu ul {
@@ -72,7 +72,7 @@ cursor: pointer;
     font-size: 2em;
     color: #3DFF0E;
     position:relative;
-    left: 225px;
+    left: 160px;
     cursor: pointer;
 }
 
@@ -200,7 +200,7 @@ input, .btn{
     border: 1px solid #3EFF0E;
     background-color: transparent;
     font-family: 'Share Tech Mono',sans-serif;
-	color:#3EFF0E;
+	  color:#3EFF0E;
     font-size: 1.5em;
     margin-top:5%;
 }
@@ -323,7 +323,7 @@ select {
 }
 
 .play{
-  margin-top: 4em;
+  margin-top: 1em;
 }
 
 .intro{
@@ -331,11 +331,67 @@ select {
   font-family: 'Share Tech Mono', sans-serif;
   font-size: 1em;
   margin-bottom: -3em;
-  margin-top: 8em;
 }
 
 .mutinygames{
   font-family: 'Permanent Marker', cursive;
   font-size: 3em;
   color:#3EFF0E;
+}
+
+
+  #messages li{
+    color:#3EFF0E;
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 1em;
+  }
+
+  .chat-aligner, .form-aligner{
+    display: flex;
+    justify-content: center;
+  }
+
+  #chatbox{
+    display: flex;
+    min-height: 60vh;
+    flex-direction: row;
+    width: 55%;
+    border: 2px;
+    border-color: #3EFF0E;
+    border-style: solid;
+  }
+
+  #m{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.myChatButton {
+   margin-left: 4px;
+  -moz-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #3eff0e;
+  background-color:transparent;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #3eff0e;
+  display:inline-block;
+  cursor:pointer;
+  color:#3EFF0E;
+  font-family:'Share Tech Mono',sans-serif;
+  font-size:16px;
+  padding:8px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #3eff0e;
+  padding-bottom: 4px;
+  margin-bottom: 9px;
+}
+
+.mutiny-chat{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+  color:#3EFF0E;
+  text-align: center;
 }

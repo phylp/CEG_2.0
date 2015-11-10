@@ -52,7 +52,7 @@
 
 	__webpack_require__(4)(cegApp);
 	__webpack_require__(7)(cegApp);
-	__webpack_require__(11)(cegApp);
+	__webpack_require__(12)(cegApp);
 
 
 
@@ -30018,7 +30018,8 @@
 	module.exports = function(app){
 	  __webpack_require__(8)(app);
 	  __webpack_require__(9)(app);
-	  __webpack_require__(10)(app); 
+	  __webpack_require__(10)(app);
+	  __webpack_require__(11)(app); 
 	}
 
 /***/ },
@@ -30132,7 +30133,7 @@
 
 	      $('.icon-close').click(function() {
 	        $('.menu').animate({
-	          left: "-285px"
+	          left: "-210px"
 	        }, 200);
 
 	        $('body').animate({
@@ -30326,6 +30327,26 @@
 /***/ function(module, exports) {
 
 	module.exports = function(app){
+	  app.controller('chat', ['$scope', function($scope){
+	    $scope.main = function(){
+	      var socket = io();
+	      $('form').submit(function(){
+	        socket.emit('chat message', $('#m').val());
+	        $('#m').val('');
+	        return false;
+	      });
+	      socket.on('chat message', function(msg){
+	        $('#messages').append($('<li>').text(msg));
+	      });
+	    };
+	  }]);
+	}
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	module.exports = function(app){
 	  app.config(['$routeProvider', function($route){
 	    $route
 	      .when('/home', {
@@ -30343,6 +30364,10 @@
 	      .when('/search', {
 	        templateUrl: 'templates/search.html',
 	        controller: 'newsController'
+	      })
+	      .when('/chat', {
+	        templateUrl: 'templates/chat.html',
+	        controller: 'chat'
 	      })
 	      .otherwise({
 	        redirectTo: '/home'

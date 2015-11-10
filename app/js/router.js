@@ -17,6 +17,10 @@ module.exports = function(app){
         templateUrl: 'templates/search.html',
         controller: 'newsController'
       })
+      .when('/chat', {
+        templateUrl: 'templates/chat.html',
+        controller: 'chat'
+      })
       .otherwise({
         redirectTo: '/home'
       })
