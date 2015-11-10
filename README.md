@@ -3,7 +3,7 @@
 CEG 2.0 is the latest from Cardiff Electric's R&D lab in Dallas. The CEG features a new graphical user interface, web search, and real time news and weather! 
 
 ## Demo
-Click [here](http://phylp.github.io/CEG_2.0/) to try it out.
+Click [here](https://ceg.herokuapp.com) to try it out.
 
 ## Creator
 The Giant 2.0 was created by Phillip Son 
